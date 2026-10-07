@@ -25,12 +25,6 @@
   };
   sel.addEventListener('change', syncPortfolio); syncPortfolio();
 
-  // nguồn "Khác"
-  const src = form.elements.source, srcOther = form.querySelector('.f-source-other');
-  src.addEventListener('change', () => {
-    const o = src.value === 'Khác'; srcOther.hidden = !o; form.elements.sourceOther.required = o;
-  });
-
   // ngày sinh không quá hôm nay
   const d = new Date(); form.elements.dob.max = d.toISOString().slice(0, 10);
 
